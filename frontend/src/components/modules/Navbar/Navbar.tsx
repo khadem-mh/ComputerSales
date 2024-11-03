@@ -29,7 +29,7 @@ const Navbar = () => {
                         placeholder="دنبال چی می گردی؟"
                         className="w-[20rem]"
                     />
-                    <FiSearch className="text-2xl" />
+                    <FiSearch className="text-2xl cursor-pointer rotate-45 hover:rotate-0 transition-all duration-300" />
                 </div>
 
                 <div className="flex items-center shadow-xl rounded-lg px-4 py-2">
@@ -45,7 +45,11 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="text-2xl rounded-md p-2 cursor-pointer hover:text-gray-500 hover:bg-slate-100 transition-all duration-300 border">
+                    <div className="relative text-2xl rounded-md p-2 cursor-pointer hover:text-gray-500 hover:bg-slate-100 transition-all duration-300 border">
+                        <span className="absolute -top-[4px] -right-[4px] flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                        </span>
                         <BsBasket />
                     </div>
 

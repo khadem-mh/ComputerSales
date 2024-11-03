@@ -2,7 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  @font-face {
+    font-family: "Vazir";
+    src: url("../../public/fonts/vazir/Vazir-Medium.ttf");
+  }
+
+  @font-face {
+    font-family: "Lalezar";
+    src: url("../../public/fonts/Lalezar/TTF/Lalezar-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "IranSans";
+    src: url("../../public/fonts/IRANSans/IRANSans.ttf");
+  }
+
+  :root {
+    --gray-color: rgb(198, 200, 197);
+    --white-color: white;
+    --primary-color: #161E13;
+  }
+
+  body {
+    @apply font-["Vazir"] m-0 p-0 box-border overflow-x-hidden;
+    color: var(--primary-color);
+  }
+
+  main {
+    @apply w-full max-w-[1400px] mx-auto
+  }
+
+  ul {
+    @apply m-0
+  }
+
+  li {
+    @apply list-none
+  }
+
+  a {
+    @apply transition-all duration-300 hover:brightness-200
+  }
+
+  input {
+    @apply [all:unset]
+  }
+
+  /* scroll Custom */
+  ::-webkit-scrollbar {
+    @apply w-[5px]
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-[#f1f1f1]
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#888]
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#555]
+  }
 }

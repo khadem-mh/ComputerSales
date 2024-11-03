@@ -1,14 +1,16 @@
-import "./globals.css";
+import "@styles/globals.css"
 
 type RootLayoutProps = {
-  children: Readonly<React.ReactNode>
+  children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="fa">
-      <body>
-        {children}
+    <html lang="fa" dir="rtl">
+      <body cz-shortcut-listen="false">
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
